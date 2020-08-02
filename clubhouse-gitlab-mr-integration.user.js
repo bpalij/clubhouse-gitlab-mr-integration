@@ -59,18 +59,18 @@
         newInput.id = 'tampermonkey-added-input-with-text-for-copy';
         newInput.style.backgroundColor='inherit';
         newInput.style.textOverflow = 'ellipsis'; // ... in end, if too big text
-        newInput.classList.add("inline-attribute-field");
+        newInput.classList.add("inline-attribute-field"); // page native style
         newInput.style.padding = '5px';
 
-        var newTextWrapper = document.createElement('div');
+        var newTextWrapper = document.createElement('div'); // created to make page native css selector work
         newTextWrapper.id = 'tampermonkey-added-text-wrapper-for-copy-this-in-gitlab-mr';
-        newTextWrapper.classList.add("attribute");
-        newTextWrapper.style.padding = '0 0';
+        newTextWrapper.classList.add("attribute"); // page native style
+        newTextWrapper.style.padding = '0 0'; // fix style
 
         var newText = document.createElement('span');
         newText.innerText = 'Copy this in gitlab merge request!';
         newText.id = 'tampermonkey-added-span-text-copy-this-in-gitlab-mr';
-        newText.classList.add("name");
+        newText.classList.add("name"); // page native style
 
         newTextWrapper.appendChild(newText);
 
@@ -85,7 +85,7 @@
         button.id = 'tampermonkey-added-button-that-will-copy-text';
         button.style.backgroundColor='inherit';
         button.style.padding = '5px';
-        button.classList.add("inline-attribute-field");
+        button.classList.add("inline-attribute-field"); // page native style
 
         // creating button logic
         button.addEventListener('click', function (e) {
