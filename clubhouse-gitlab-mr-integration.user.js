@@ -7,6 +7,8 @@
 // @match        https://app.clubhouse.io/*/story/*/*
 // @source       https://github.com/bpalij/clubhouse-gitlab-mr-integration
 // @supportURL   https://github.com/bpalij/clubhouse-gitlab-mr-integration/issues
+// @updateURL    https://github.com/bpalij/clubhouse-gitlab-mr-integration/raw/master/clubhouse-gitlab-mr-integration.user.js
+// @downloadURL  https://github.com/bpalij/clubhouse-gitlab-mr-integration/raw/master/clubhouse-gitlab-mr-integration.user.js
 // @grant        none
 // ==/UserScript==
 
