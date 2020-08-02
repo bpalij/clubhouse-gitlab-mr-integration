@@ -21,5 +21,5 @@ Tampermonkey script, copies correct link for gitlab merge request integration wi
 
 ## For developers
 
-If you want to integrate VS code or other IDE/editor, you can use [this instruction](https://stackoverflow.com/a/55568502)
+If you want to integrate VS code or other IDE/editor with Tampermonkey, you can use [this instruction](https://stackoverflow.com/a/55568502)
 
