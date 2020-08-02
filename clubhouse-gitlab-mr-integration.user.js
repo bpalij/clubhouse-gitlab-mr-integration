@@ -4,7 +4,7 @@
 // @version      0.0-alpha
 // @description  Copies correct link for clubhouse integration with gitlab merge request
 // @author       bpalij | https://github.com/bpalij
-// @match        https://app.clubhouse.io/*/story/*/*
+// @match        https://app.clubhouse.io/*
 // @source       https://github.com/bpalij/clubhouse-gitlab-mr-integration
 // @supportURL   https://github.com/bpalij/clubhouse-gitlab-mr-integration/issues
 // @updateURL    https://github.com/bpalij/clubhouse-gitlab-mr-integration/raw/master/clubhouse-gitlab-mr-integration.user.js
@@ -21,7 +21,7 @@
 
   var alreadyCreatedTimers = 0; // some time after rendering page it deletes tampermonkey elements, so checking some times in a row before deleting check timer
 
-  var newTimer = setInterval(function () { // needed elements appear not on page load, so checking while needed elements will not appear on page
+  setInterval(function () { // needed elements appear not on page load, so checking while needed elements will not appear on page
 
     // checking if elements which are created by this script are on page
     var alreadyCreatedSpan1 = document.getElementById('tampermonkey-added-span-text-copy-this-in-gitlab-mr');
@@ -30,11 +30,7 @@
     var alreadyCreatedButton = document.getElementById('tampermonkey-added-button-that-will-copy-text');
     var alreadyCreatedSpanWrapper1 = document.getElementById('tampermonkey-added-text-wrapper-for-copy-this-in-gitlab-mr');
 
-    if (alreadyCreatedSpan1 || alreadyCreatedSpan2 || alreadyCreatedInput || alreadyCreatedButton || alreadyCreatedSpanWrapper1) {
-
-      if( (alreadyCreatedTimers++) > 100) { clearInterval(newTimer); } // if elements are kept on page for some time and do not disappear, delete timer
-
-    } else {
+    if (!(alreadyCreatedSpan1 || alreadyCreatedSpan2 || alreadyCreatedInput || alreadyCreatedButton || alreadyCreatedSpanWrapper1)) { // if our elements are not on page
 
       alreadyCreatedTimers = 0; // if elements disappeared, start counting again
 
