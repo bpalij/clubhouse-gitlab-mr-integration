@@ -39,7 +39,7 @@
       var linkElement = document.querySelector('.story>.story-details>.right-column>.story-attributes>.attribute.attribute-has-toggle.inline-attribute-field>input.permalink'); // take link from here
       var linkBlock = document.querySelector('.story>.story-details>.right-column>.story-attributes>.attribute.attribute-has-toggle.inline-attribute-field'); // add elements after this element
 
-      if(idElement && linkElement && linkBlock) {
+      if(idElement && linkElement && linkBlock) { // if required elements are ready
 
         // create text for copy
         // @ts-ignore
