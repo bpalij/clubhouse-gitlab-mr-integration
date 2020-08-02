@@ -88,6 +88,7 @@
             // @ts-ignore
             document.selection.empty();
           }
+          newInput.blur(); // take away focus
           copiedText.style.display = 'inline'; // show text after copying to see it worked
           setTimeout(function () { copiedText.style.display = 'none'; }, 1000); // element must disappear after some time for beauty
 
