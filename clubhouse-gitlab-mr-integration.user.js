@@ -56,6 +56,7 @@
         newInput.readOnly = true;
         newInput.size = 16;
         newInput.id = 'tampermonkey-added-input-with-text-for-copy';
+        newInput.style.backgroundColor='inherit';
 
         var newText = document.createElement('span');
         newText.innerText = 'Copy this in gitlab merge request!';
@@ -71,6 +72,7 @@
         button.type = 'button';
         button.value = 'Copy';
         button.id = 'tampermonkey-added-button-that-will-copy-text';
+        button.style.backgroundColor='inherit';
 
         // creating button logic
         button.addEventListener('click', function (e) {
@@ -80,6 +82,12 @@
           // next 2 lines copy text
           newInput.select();
           document.execCommand('copy');
+          if (window.getSelection) { // take away selection
+            window.getSelection().removeAllRanges();
+          } else { // old IE
+            // @ts-ignore
+            document.selection.empty();
+          }
           copiedText.style.display = 'inline'; // show text after copying to see it worked
           setTimeout(function () { copiedText.style.display = 'none'; }, 1000); // element must disappear after some time for beauty
 
