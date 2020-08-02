@@ -26,8 +26,9 @@
     var alreadyCreatedSpan2 = document.getElementById('tampermonkey-added-span-text-copied');
     var alreadyCreatedInput = document.getElementById('tampermonkey-added-input-with-text-for-copy');
     var alreadyCreatedButton = document.getElementById('tampermonkey-added-button-that-will-copy-text');
+    var alreadyCreatedSpanWrapper1 = document.getElementById('tampermonkey-added-text-wrapper-for-copy-this-in-gitlab-mr');
 
-    if (alreadyCreatedSpan1 || alreadyCreatedSpan2 || alreadyCreatedInput || alreadyCreatedButton) {
+    if (alreadyCreatedSpan1 || alreadyCreatedSpan2 || alreadyCreatedInput || alreadyCreatedButton || alreadyCreatedSpanWrapper1) {
 
       if( (alreadyCreatedTimers++) > 100) { clearInterval(newTimer); } // if elements are kept on page for some time and do not disappear, delete timer
 
@@ -40,7 +41,7 @@
       var linkElement = document.querySelector('.story>.story-details>.right-column>.story-attributes>.attribute.attribute-has-toggle.inline-attribute-field>input.permalink'); // take link from here
       var linkBlock = document.querySelector('.story>.story-details>.right-column>.story-attributes>.attribute.attribute-has-toggle.inline-attribute-field'); // add elements after this element
 
-      if(idElement && linkElement && linkBlock){
+      if(idElement && linkElement && linkBlock) {
 
         // create text for copy
         // @ts-ignore
@@ -57,11 +58,21 @@
         newInput.size = 16;
         newInput.id = 'tampermonkey-added-input-with-text-for-copy';
         newInput.style.backgroundColor='inherit';
+        newInput.style.textOverflow = 'ellipsis'; // ... in end, if too big text
+        newInput.classList.add("inline-attribute-field");
+        newInput.style.padding = '5px';
+
+        var newTextWrapper = document.createElement('div');
+        newTextWrapper.id = 'tampermonkey-added-text-wrapper-for-copy-this-in-gitlab-mr';
+        newTextWrapper.classList.add("attribute");
+        newTextWrapper.style.padding = '0 0';
 
         var newText = document.createElement('span');
         newText.innerText = 'Copy this in gitlab merge request!';
         newText.id = 'tampermonkey-added-span-text-copy-this-in-gitlab-mr';
-        newText.style.display = 'block';
+        newText.classList.add("name");
+
+        newTextWrapper.appendChild(newText);
 
         var copiedText = document.createElement('span');
         copiedText.innerText = 'Copied';
@@ -73,6 +84,8 @@
         button.value = 'Copy';
         button.id = 'tampermonkey-added-button-that-will-copy-text';
         button.style.backgroundColor='inherit';
+        button.style.padding = '5px';
+        button.classList.add("inline-attribute-field");
 
         // creating button logic
         button.addEventListener('click', function (e) {
@@ -98,7 +111,7 @@
         linkBlock.parentNode.insertBefore(copiedText, linkBlock.nextSibling);
         linkBlock.parentNode.insertBefore(button, linkBlock.nextSibling);
         linkBlock.parentNode.insertBefore(newInput, linkBlock.nextSibling);
-        linkBlock.parentNode.insertBefore(newText, linkBlock.nextSibling);
+        linkBlock.parentNode.insertBefore(newTextWrapper, linkBlock.nextSibling);
       }
     }
   }, 100) // how often checking page
