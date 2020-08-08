@@ -21,5 +21,10 @@ Tampermonkey script, copies correct link for gitlab merge request integration wi
 
 ## For developers
 
+To use eslint you need to have node version ^10.12.0 || >=12.0.0
+
+1. `npm i`
+2. `npm run eslint` for check; `npm run eslint-fix` for autofix
+
 If you want to integrate VS code or other IDE/editor with Tampermonkey, you can use [this instruction](https://stackoverflow.com/a/55568502)
 
