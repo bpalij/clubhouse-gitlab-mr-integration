@@ -21,7 +21,7 @@ Tampermonkey script, copies correct link for gitlab merge request integration wi
 
 ## For developers
 
-To use eslint you need to have node version ^10.12.0 || >=12.0.0
+To use eslint you need to have node version ^10.12.0 || >=12.0.0, husky needs Node >= 10 and Git >= 2.13.0.
 
 1. `npm i`
 2. `npm run eslint` for check; `npm run eslint-fix` for autofix

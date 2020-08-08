@@ -19,6 +19,12 @@
   ],
   "author": "bpalij",
   "license": "MIT",
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run eslint",
+      "pre-push": "npm run eslint"
+    }
+  },
   "bugs": {
     "url": "https://github.com/bpalij/clubhouse-gitlab-mr-integration/issues"
   },
@@ -26,7 +32,8 @@
   "devDependencies": {
     "eslint": "^7.6.0",
     "eslint-config-es5": "^0.5.0",
-    "eslint-plugin-es5": "^1.5.0"
+    "eslint-plugin-es5": "^1.5.0",
+    "husky": "^4.2.5"
   },
   "engines": {
     "node": "^10.12.0 || >=12.0.0"
