@@ -1,0 +1,21 @@
+{
+    "env": {
+        "browser": true
+    },
+    "parserOptions": {
+        "ecmaVersion": 5,
+        "sourceType": "script",
+        "ecmaFeatures": {
+        }
+    },
+    "plugins": [
+        "es5"
+    ],
+    "extends": [
+        "eslint:recommended",
+        "plugin:es5/no-es2015",
+        "eslint-config-es5"
+    ],
+    "rules": {
+    }
+}

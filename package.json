@@ -1,0 +1,34 @@
+{
+  "name": "clubhouse-gitlab-mr-integration",
+  "version": "0.0.0",
+  "description": "Tampermonkey script, copies correct link for gitlab merge request integration with clubhouse",
+  "main": "clubhouse-gitlab-mr-integration.user.js",
+  "scripts": {
+    "eslint": "npx eslint \"**/*.js\"",
+    "eslint-fix": "npx eslint --fix \"**/*.js\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bpalij/clubhouse-gitlab-mr-integration.git"
+  },
+  "keywords": [
+    "tampermonkey",
+    "userscript",
+    "clubhouse",
+    "gitlab"
+  ],
+  "author": "bpalij",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bpalij/clubhouse-gitlab-mr-integration/issues"
+  },
+  "homepage": "https://github.com/bpalij/clubhouse-gitlab-mr-integration#readme",
+  "devDependencies": {
+    "eslint": "^7.6.0",
+    "eslint-config-es5": "^0.5.0",
+    "eslint-plugin-es5": "^1.5.0"
+  },
+  "engines": {
+    "node": "^10.12.0 || >=12.0.0"
+  }
+}
