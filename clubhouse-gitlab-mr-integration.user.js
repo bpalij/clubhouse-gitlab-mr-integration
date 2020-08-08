@@ -20,7 +20,7 @@
 
   setInterval(function() { // needed elements appear not on page load, so checking while needed elements will not appear on page
     // checking if elements which are created by this script are on page
-      var alreadyCreatedSpan1 = document.getElementById('tampermonkey-added-span-text-copy-this-in-gitlab-mr');
+    var alreadyCreatedSpan1 = document.getElementById('tampermonkey-added-span-text-copy-this-in-gitlab-mr');
     var alreadyCreatedSpan2 = document.getElementById('tampermonkey-added-span-text-copied');
     var alreadyCreatedInput = document.getElementById('tampermonkey-added-input-with-text-for-copy');
     var alreadyCreatedButton = document.getElementById('tampermonkey-added-button-that-will-copy-text');
