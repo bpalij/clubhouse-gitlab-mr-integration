@@ -1,7 +1,7 @@
 # Clubhouse gitlab merge request integration
 Tampermonkey script, copies correct link for gitlab merge request integration with clubhouse
 
-# WARNING! NOT REALESED FOR NOW!
+# WARNING! PROJECT NOT MAINTAINED BECAUSE AUTHOR DOES NOT WORK WITH CLUBHOUSE NOW
 
 ## Installation
 
